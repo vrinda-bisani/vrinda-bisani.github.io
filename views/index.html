@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vrinda's Resume</title>
+    <meta charset="UTF-8" >
+    <meta name="description" content="Vrinda Bisani Resume" >
+    <meta name="keywords" content="HTML, JavaScript" >
+    <meta name="author" content="Vrinda Bisani" >
+    <link id="stylesheet" rel="stylesheet" href="/stylesheets/style.css" type="text/css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <script>
+      function openTab(evt, cityName) {
+        var i, tabcontent, tablinks;
+  
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+  
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+  
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+    <script src="/javascripts/switchMode.js"></script>
+  </head>
+  
+<body>
+  <header>
+    <div class="logo">
+      <h1>Vrinda Bisani</h1>
+    </div>
+    <div>
+      <a href="/" class="botton-title"><b> Home </b></a>
+      <a href="experience" class="botton-title"> Experience </a>
+      <a href="projects" class="botton-title"> Projects </a>
+      <a href="connect" class="botton-title"> Connect </a>
+      <a href="https://drive.google.com/file/d/1khoYDyO8qEPx3Pfg8xkEUnsX_OIMr5bI/view?usp=sharing" target="_blank" class="botton-title"> Resume </a>
+    </div>
+  </header>
+  <div class="container">
+    <div class="defaultContainer">
+      <div class="default-post">
+        <img class="default-image" alt="My Photo" height="300" width="300" src="/images/myPhoto.jpeg">
+        <div class="default-content">
+          <h1>Hi there,<br> 
+            Welcome to my journey!</h1>
+          <div class = "intro">
+            I'm a software developer on a mission to make the digital world smarter, faster, and more fun. 
+            I'm passionate about designing and developing efficient solutions to complex problem.
+            I'm currently looking for Full time Early - Mid Software developer roles!
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div class="tabs">
+        <div class="tab">
+          <button class="tablinks active" onclick="openTab(event, 'Education')">Education</button>
+          <button class="tablinks" onclick="openTab(event, 'Skills')">Skills</button>
+        </div>
+        
+        <!-- Tab content -->
+        <div id="Skills" class="tabcontent">
+          <div class="content-item">
+            <h3 class = "tab-labels"> Languages </h3>
+            <p> Python, Java, HTML, CSS, PHP, JavaScript </p>
+          </div>
+          <div class="content-item">
+            <h3 class = "tab-labels"> Web Technologies </h3>
+            <p> RestAPI, AngularJS, Express.js, Node.js, React.js, XML, YAML </p>
+          </div>
+          <div class="content-item">
+            <h3 class = "tab-labels"> DBMS </h3>
+            <p> MySQL, MongoDB, PostgreSQL, Workbench, JDBC, Redis </p>
+          </div>
+          <div class="content-item">
+            <h3 class = "tab-labels"> Cloud Deployment </h3>
+            <p> Docker, AWS </p>
+          </div>
+          <div class="content-item">
+            <h3 class = "tab-labels"> Tools </h3>
+            <p> IntelliJ, Eclipse, VS Code, Anaconda, Git, XSLT, Tomcat, Jupyter Notebooks </p>
+          </div>
+        </div>
+        
+        <div id="Education" class="tabcontent" style="display: block;">
+          <div class="content-item">
+            <h3 class = "tab-labels"> Master of Science in Computer Science </h3>
+            <p> Northeastern University </p>
+            <p>GPA: 3.87/4</p>
+          </div>
+          <div class="content-item">
+            <h3 class = "tab-labels"> Bachelors of Technology in Information Technology </h3>
+            <p> Vellore Institute of Technology </p>
+            <p>GPA: 8.57/10</p>
+          </div> 
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
+  <button id = "modeToggle">Switch Mode</button>
+</body>
+</html>
